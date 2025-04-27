@@ -2,7 +2,72 @@ import java.io.*; // Permite al usuario seleccionar archivos mediante una interf
 import java.net.*;                // Manejo de flujos de entrada/salida
 import javax.swing.JFileChooser;               // Clases para la comunicación por red
 
-public class ClienteArchivo {
+public class Cliente implements Serializable{
+
+    private String name;
+    private String telefono;
+    private String curp;
+    private int edad;
+    private float peso;
+    private double altura;
+    private boolean estadoEnfermo;
+
+    public Cliente(String name, String telefono, String curp, int edad, float peso, double altura,boolean estadoEnfermo) {
+        this.name = name;
+        this.telefono = telefono;
+        this.curp = curp;
+        this.edad = edad;
+        this.peso = peso;
+        this.altura = altura;
+        this.estadoEnfermo = estadoEnfermo;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getTelefono() {
+        return telefono;
+    }
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+    public String getCURP() {
+        return curp;
+    }
+    public void setCURP(String curp) {
+        this.curp = curp;
+    }
+    public int getEdad() {
+        return edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    public float getPeso() {
+        return peso;
+    }
+    public void setPeso(float peso) {
+        this.peso = peso;
+    }
+    public double getAltura() {
+        return altura;
+    }
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+    public boolean isEstadoEnfermo() {
+        return estadoEnfermo;
+    }
+    public void setEstadoEnfermo(boolean estadoEnfermo) {
+        this.estadoEnfermo = estadoEnfermo;
+    }
+
+    
+
+
+
     public static void main(String[] args) {
         try {
             // Dirección y puerto del servidor al que se conectará el cliente
